@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import useCookie from '../customHooks/useCookie';
 
-const SERVER_URL = 'https://notforsale-server-aec3a7f0c2bf.herokuapp.com/';
+const SERVER_URL = 'https://notforsale-server-aec3a7f0c2bf.herokuapp.com';
 
 const AuthContext = createContext();
 
