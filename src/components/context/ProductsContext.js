@@ -2,6 +2,8 @@ import { createContext, useEffect, useState } from 'react';
 
 import useCookie from '../customHooks/useCookie';
 
+const SERVER_URL = 'https://notforsale-server-aec3a7f0c2bf.herokuapp.com/';
+
 const ProductsContext = createContext();
 
 export default ProductsContext;
@@ -17,7 +19,7 @@ export const ProductsProvider = ({ children }) => {
     headers.append('Access-Control-Allow-Credentials', 'true');
 
     const fetchProducts = async () => {
-      const res = await fetch(`https://notforsaleweb-a185cdef4039.herokuapp.com/api/data/products`, {
+      const res = await fetch(`https://${SERVER_URL}/api/data/products`, {
         method: 'GET',
         headers
       });

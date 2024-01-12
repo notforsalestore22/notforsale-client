@@ -3,6 +3,8 @@ import { createContext, useMemo, useContext, useEffect, useState } from 'react';
 import ProductsContext from '../context/ProductsContext';
 import AuthContext from '../context/AuthContext';
 
+const SERVER_URL = 'https://notforsale-server-aec3a7f0c2bf.herokuapp.com/';
+
 const CheckoutContext = createContext();
 
 export default CheckoutContext;
@@ -22,7 +24,7 @@ export const CheckoutProvider = ({ children }) => {
 
   useEffect(() => {
     const getCustomerId = async () => {
-      const res = await fetch(`https://notforsaleweb-a185cdef4039.herokuapp.com/api/data/customerId`, {
+      const res = await fetch(`https://${SERVER_URL}/api/data/customerId`, {
         method: 'GET',
         headers: {
           ...headers,
@@ -61,7 +63,7 @@ export const CheckoutProvider = ({ children }) => {
   const checkout = async (registerCustomerId) => {
     const customer_id = registerCustomerId || customerId;
 
-    const res = await fetch(`https://notforsaleweb-a185cdef4039.herokuapp.com/api/checkout/`, {
+    const res = await fetch(`https://${SERVER_URL}/api/checkout/`, {
       method: 'POST',
       headers: {
         ...headers,
@@ -81,7 +83,7 @@ export const CheckoutProvider = ({ children }) => {
   }
 
   const createPortalSession = async () => {
-    const res = await fetch(`https://notforsaleweb-a185cdef4039.herokuapp.com/api/checkout/createPortalSession`, {
+    const res = await fetch(`https://${SERVER_URL}/api/checkout/createPortalSession`, {
       method: 'POST',
       headers: {
         ...headers,

@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 import useCookie from '../customHooks/useCookie';
 
+const SERVER_URL = 'https://notforsale-server-aec3a7f0c2bf.herokuapp.com/';
+
 const AuthContext = createContext();
 
 export default AuthContext;
@@ -28,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   }, [accessToken]);
 
   const registerUser = async ({ name, surname, address, country, city, zip_code, email, password }) => {
-    const res = await fetch(`https://notforsaleweb-a185cdef4039.herokuapp.com/api/auth/register`, {
+    const res = await fetch(`https://${SERVER_URL}/api/auth/register`, {
       method: 'POST',
       headers: {
         ...headers,
@@ -46,7 +48,7 @@ export const AuthProvider = ({ children }) => {
 
   const loginUser = async ({ email, password }) => {
 
-    const res = await fetch(`https://notforsaleweb-a185cdef4039.herokuapp.com/api/auth/login`, {
+    const res = await fetch(`https://${SERVER_URL}/api/auth/login`, {
       method: 'POST',
       headers: {
         ...headers,
@@ -71,7 +73,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   const resetPasswordEmail = async (email) => {
-    const res = await fetch('https://notforsaleweb-a185cdef4039.herokuapp.com/api/auth/resetPasswordEmail', {
+    const res = await fetch(`https://${SERVER_URL}/api/auth/resetPasswordEmail`, {
       method: 'POST',
       headers: {
         ...headers,
@@ -92,7 +94,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   const resetPassword = async ({ updatedPassword, token }) => {
-    const res = await fetch('https://notforsaleweb-a185cdef4039.herokuapp.com/api/auth/resetPassword', {
+    const res = await fetch(`https://${SERVER_URL}/api/auth/resetPassword`, {
       method: 'PUT',
       headers: {
         ...headers,
