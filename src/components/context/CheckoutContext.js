@@ -3,7 +3,7 @@ import { createContext, useMemo, useContext, useEffect, useState } from 'react';
 import ProductsContext from '../context/ProductsContext';
 import AuthContext from '../context/AuthContext';
 
-const SERVER_URL = 'https://notforsale-server-aec3a7f0c2bf.herokuapp.com';
+const SERVER_URL = 'notforsale-server-aec3a7f0c2bf.herokuapp.com';
 
 const CheckoutContext = createContext();
 
