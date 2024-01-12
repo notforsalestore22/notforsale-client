@@ -1,0 +1,59 @@
+.Footer {
+  position: relative;
+  background-color: var(--color-1);
+}
+
+.card-circuit-badges-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-circuit-badges {
+  display: flex;
+  justify-content: center;
+  gap: 20px 10px;
+  padding: 40px 0;
+}
+
+.card-circuit-badge {
+  width: 45px;
+  height: 30px;
+  background-color: var(--color-2);
+  border: .5px solid var(--color-1);
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px 0;
+  padding: 20px 60px;
+  color: var(--color-2);
+  font-size: 14px;
+  border-top: 1px solid var(--color-3);
+}
+
+.footer-copyright ul {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-copyright li {
+  text-decoration: underline;
+  color: var(--color-3);
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-copyright {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 12px;
+  }
+
+  .card-circuit-badges {
+    width: 265px;
+    flex-wrap: wrap;
+  }
+}
