@@ -9,7 +9,7 @@
   color: var(--color-2);
 }
 
-.hero h4 {
+.hero h1, h4 {
   text-align: center;
   line-height: 1.3;
 }

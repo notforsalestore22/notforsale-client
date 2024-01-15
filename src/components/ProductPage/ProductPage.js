@@ -110,7 +110,7 @@ const ProductPage = () => {
                 <FiPlus className="icon" />
               </div>
             </div>
-            <p className="mt-2" style={{ color: 'var(--color-5)' }}>Seleziona un budle e risparmia!</p>
+            <p className="mt-2" style={{ color: 'var(--color-5)' }}>Seleziona un bundle e risparmia!</p>
             <div className="product-bundles">
               <div className={`product-bundle-btn ${selectedBundle === 0 ? '-selected' : ''}`} onClick={() => onClickBundle(0)} >1x</div>
               <div className={`product-bundle-btn ${selectedBundle === 1 ? '-selected' : ''}`} onClick={() => onClickBundle(1)} >3x</div>
