@@ -46,7 +46,7 @@ function App() {
         </AuthProvider>
       </ProductsProvider>
       <Footer />
-      <a href="http://bit.ly/3RThHRT">
+      <a href="http://bit.ly/48yj3bM">
         <div className="whatsapp-btn">
           <img src="/img/whatsapp.svg" alt="" className="img-res" />
         </div>
